@@ -63,6 +63,10 @@ python3 reddit_client.py watch --interval 300
 
 The client reads one thread's returned comments but does not expand Reddit `morechildren` markers yet. Inbox coverage may differ from the Reddit app's notification feed and must be verified with an approved account.
 
+## Separate Devvit experiment
+
+The companion `ielts-reply-lab` project was created with Reddit's React Devvit template and runs in a private playtest subreddit. [Devvit's authentication](https://developers.reddit.com/docs/guides/faq) is separate from this local client's OAuth flow. Joining Devvit and running its playtest do not grant Data API access to this Python program; its approval gate remains in force. Devvit is a useful route for community-installed discussion tools, while this local client addresses the personal thread and inbox workflow.
+
 ## Data and AI
 
 This repository contains no account data, credentials, or AI API integration. Local drafts and processed inbox IDs remain in private local files. If you use an external AI provider to prepare reply text before passing it to `draft`, disclose that processing to Reddit and review the text before posting. No autonomous replies, votes, DMs, or bulk collection are implemented.
